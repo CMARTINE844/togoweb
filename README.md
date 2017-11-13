@@ -1,9 +1,9 @@
-# Focus track #
+# Time2GoWeb #
 
 **Objetivo de la herramienta:**
 Brindar a los usuarios un espacio mediante el cual indiquen los proyectos que trabajaron durante el día y registren el tiempo real en horas que dedicaron a cada uno, esto dará transparencia a sus encargados de grupo de como se está dedicando el tiempo y que tan certeras fueron sus estimaciones antes de iniciar el proyecto.
 
-## ¿Quiénes ingresaran al portal web Focus Track? ##
+## ¿Quiénes ingresaran al portal web ToGo? ##
 Los AGENTES, un agente es un usuario que no cuenta con licencia Salesforce y que tiene la responsabilidad de registrar sus horas diarias dedicadas por proyecto.
 Un AGENTE puede:
 * Ingresar al portal web con su código de agente [IdEmpleado] y contraseña. [Inicial que deje entrar con clave Temp1234]
@@ -22,5 +22,5 @@ Un AGENTE puede:
 * Puede consultar la información base de su perfil y cambiar su contraseña
 
 
-## ¿Quiénes ingresan a Focus Track desde Salesforce? ##
+## ¿Quiénes ingresan a time2Go desde Salesforce? ##
 Los **ENCARGADOS DE GRUPO** o facilitadores de grupo en focus track ingresan desde Salesforce con su cuenta nombrada, un **ENCARGADO DE GRUPO** también puede ser un AGENTE, en estos casos el registro de horas lo realiza desde el portal web como un AGENTE y las actividades de monitoreo y revisión de las horas registradas por los agentes de su grupo lo hace desde Salesforce.
