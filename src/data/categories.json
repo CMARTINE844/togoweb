@@ -1,0 +1,62 @@
+[
+    {
+        "code": "VT",
+        "name": "Dimensionamiento"
+    },
+    {
+        "code": "VT",
+        "name": "Demo"
+    },
+    {
+        "code": "F0",
+        "name": "Precheck"
+    },
+    {
+        "code": "F1",
+        "name": "Planeación del proyecto"
+    },
+    {
+        "code": "F2",
+        "name": "Levantamiento/Definición/Diseño"
+    },
+    {
+        "code": "F3",
+        "name": "Parametrización/Desarrollo"
+    },
+    {
+        "code": "F3",
+        "name": "Pruebas"
+    },
+    {
+        "code": "F4",
+        "name": "Capacitación"
+    },
+    {
+        "code": "F4",
+        "name": "Saldos iniciales"
+    },
+    {
+        "code": "F4",
+        "name": "Taller agentes de cambio"
+    },
+    {
+        "code": "F5",
+        "name": "Acompañamiento en productivo"
+    },
+    {
+        "code": "F5",
+        "name": "Cierre de proyecto"
+    },
+    {
+        "code": "S0",
+        "name": "Soporte Consultoría"
+    },
+    {
+        "code": "SE",
+        "name": "Servicio"
+    },
+    {
+        "code": "D0",
+        "name": "Diseño"
+    }
+]

@@ -1,0 +1,76 @@
+<form md-whiteframe="2" novalidate name="logForm">
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <span><i class="material-icons">note_add</i> Registrar trabajo</span>
+        </div>
+    </md-toolbar>
+
+    <div layout="column" layout-padding layout-margin>
+
+        <!-- Category -->
+        <md-input-container flex>
+            <label><translate> Categoría </translate></label>
+            <md-select ng-model="vm.logForm.category" required>
+                <md-option ng-repeat="category in vm.categories" ng-value="{{ category }}">
+                    {{ category.code + ' - ' + category.name }}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+        <div layout="row">
+            <!-- Horas -->
+            <div>
+                <md-input-container>
+                    <label>Horas</label>
+                    <md-select ng-model="vm.logForm.hours" aria-label="Horas" required>
+                        <md-option ng-value="option" ng-repeat="option in vm.allowed.hours">
+                            {{ option }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <!-- Minutos -->
+            <div>
+                <md-input-container>
+                    <label>Minutos</label>
+                    <md-select flex ng-model="vm.logForm.minutes" placeholder="Minutos" aria-label="Minutos" required>
+                        <md-option ng-value="option" ng-repeat="option in vm.allowed.minutes">
+                            {{ option }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <!-- Fecha -->
+            <md-input-container flex>
+                <input aria-label="Fecha" min-view="date" date-time auto-close="true" ng-model="vm.logForm.date" view="date" format="DD/MM/YYYY"
+                    name="FechaInicio" required>
+            </md-input-container>
+        </div>
+
+        <div layout="row">
+            <md-input-container flex>
+                <label> Comentario </label>
+                <textarea ng-model="vm.logForm.comment" name="comment" rows="2" minlength="5" md-maxlength="150" required></textarea>
+                <div ng-messages="logForm.comment.$error">
+                    <div ng-message="required">
+                        *
+                    </div>
+                    <div ng-message="minlength">
+                        <translate>Escribe al menos caracteres</translate>
+                    </div>
+                    <div ng-message="maxlength">
+                        <translate>Escribe menos de caracteres</translate>
+                    </div>
+                </div>
+            </md-input-container>
+        </div>
+    </div>
+
+    <div layout="row" layout-align="end center">
+        <md-button id="button-add" class="md-primary md-raised" ng-disabled="logForm.$invalid || !vm.logForm.category || (vm.logForm.minutes === 0 && vm.logForm.hours === 0)"
+            type="button" aria-label="button-add" ng-click="vm.addLog(vm.logForm)">
+            Añadir </md-button>
+    </div>
+</form>

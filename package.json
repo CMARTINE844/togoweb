@@ -1,0 +1,20 @@
+{
+  "name": "focus_track",
+  "version": "0.0.1",
+  "description": "This project uses Angular 1.x and its code is based in Todd Motto's style guide ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Domínguez Roberto, Echauri Carlos, Martínez Christian",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.9",
+    "bower": "^1.8.0",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.2.2",
+    "webpack": "^1.14.0"
+  }
+}

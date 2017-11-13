@@ -1,0 +1,27 @@
+{
+  "name": "focus_track",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Domínguez Roberto",
+    "Echauri Carlos",
+    "Martínez Christian"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1",
+    "angular-ui-router": "^0.3.2",
+    "angular-datepicker": "^2.0.3",
+    "moment": "^2.17.1"
+  }
+}

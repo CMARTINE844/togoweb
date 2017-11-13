@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Talentry-Agroenzymas",
+        "logs": [
+            {
+                "date": "1482940331841",
+                "hours": 2,
+                "minutes": 15
+            },
+            {
+                "date": "1482940331841",
+                "hours": 5,
+                "minutes": 0
+            }
+        ]
+    },
+    {
+        "name": "Talentry-CompuSoluciones",
+        "logs": [
+            {
+                "date": "1482940331841",
+                "hours": 2,
+                "minutes": 15
+            }
+        ]
+    }
+]

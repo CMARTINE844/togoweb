@@ -1,0 +1,61 @@
+<md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex md-truncate>  Time 2Go</h2>
+         <span flex></span>
+            <md-button id="buttonExit" class="md-raised" aria-label="Cerrar sesión" ng-click="vm.logout()"> Salir </md-button>
+      </div>
+</md-toolbar>
+<div layout="column" layout-align="center center">
+    <div layout="row" layout-align="center center">
+        <h2 layout-padding> Elige un proyecto:</h2>
+        <p ng-if="vm.projects.length === 0">No tienes proyectos asignados</p>
+        <div flex>
+            <md-input-container layout-margin ng-if="vm.projects.length > 0">
+                <md-select ng-model="vm.selectedProject" aria-label="Proyecto" placeholder="Selecciona un proyecto" ng-change="vm.getLogs(vm.selectedProject)">
+                    <md-option ng-value="project" ng-repeat="project in vm.projects">
+                        {{ project.proyecto }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+    </div>
+</div>
+
+<!-- Projects -->
+<div layout="row" layout-align="center" ng-if="vm.selectedProject">
+
+    <!-- History -->
+    <div flex="45" layout-margin>
+        <md-content md-whiteframe="2">
+            <md-toolbar layout="row">
+                <div class="md-toolbar-tools">
+                    <span><i class="material-icons">alarm_on</i> Mis registros de trabajo </span>
+                </div>
+            </md-toolbar>
+
+            <md-list ng-if="vm.logs.length > 0">
+                <md-list-item class="md-2-line" ng-repeat="log in vm.logs | limitTo: 5">
+                    <div class="md-list-item-text">
+                        <h3>{{ log.fechatrabajo | date: 'dd/MM/yyyy' }}</h3>
+                        <p>{{ log.horas }} hrs. {{ log.minutos }} min;      Aprobado: {{ log.aprobado ? 'Sí' : 'No' }}</p>
+                        <p ng-if="log.comentario.length > 0">
+                            {{ log.comentario }}
+                        </p>
+                    </div>
+                </md-list-item>
+
+                <md-list-item ng-if="vm.logs.length > 5">
+                    <span flex></span>
+                    <md-button id="buttonViewMore" class="md-primary md-raised" aria-label="Ver todos los registros" ng-click="vm.showAllLogs($event)"> Ver todos </md-button>
+                </md-list-item>
+            </md-list>
+
+            <p ng-if="vm.logs.length === 0" layout-padding>
+                No hay registros asignados a este proyecto
+            </p>
+        </md-content>
+    </div>
+
+    <!-- Work logs -->
+    <div flex="45" layout-margin ng-include="'./views/project/work-log.partial.html'"></div>
+</div>

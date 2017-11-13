@@ -1,0 +1,31 @@
+<md-dialog aria-label="Historial de registros de trabajo">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>
+                Historial de registros de trabajo
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="vm.closeModal()">
+                <i class="material-icons">clear</i>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-divider></md-divider>
+
+    <md-dialog-content>
+        <md-list-item class="md-2-line" ng-repeat="log in vm.logs">
+            <div class="md-list-item-text">
+                <h3>{{ log.fechatrabajo | date: 'yyyy/MM/dd' }} - {{ log.horas }} hrs. {{ log.minutos }} min.</h3>
+                <p>Aprobado: {{ log.aprobado ? 'Sí' : 'No' }}</p>
+                <p>Comentario: {{ log.comentario }} </p>
+            </div>
+        </md-list-item>
+    </md-dialog-content>
+
+    <div class="md-actions">
+        <md-button  class="md-raised"  ng-click="vm.closeModal()">
+            <translate>Aceptar</translate>
+        </md-button>
+    </div>
+</md-dialog>

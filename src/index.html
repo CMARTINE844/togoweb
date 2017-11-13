@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time 2Go</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="./bower_components/angular-datepicker/dist/angular-datepicker.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+    <!-- @todo Solicitar FS Lola web font -->
+</head>
+
+<body ng-app="focus-track">
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="./bower_components/moment/moment.js"></script>
+    <script src="./bower_components/moment-timezone/moment-timezone.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/ngstorage/ngStorage.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-messages/angular-messages.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+
+    <!-- App's settings -->
+    <script src="./settings/module.js"></script>
+    <script src="./settings/http-interceptor.service.js"></script>
+    <script src="./settings/config.js"></script>
+    <script src="./settings/states.js"></script>
+
+    <!-- Services -->
+    <script src="./services/end-point.service.js"></script>
+    <script src="./services/category.service.js"></script>
+    <script src="./services/project.service.js"></script>
+    <script src="./services/logger.service.js"></script>
+
+    <!-- App's views -->
+    <script src="./views/login/login.controller.js"></script>
+    <script src="./views/project/project.controller.js"></script>
+
+
+</body>
+
+</html>

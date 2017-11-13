@@ -1,0 +1,31 @@
+<div layout="row" layout-align="center center">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <form flex="50" novalidate name="loginForm" md-whiteframe="2" layout-padding>
+        <section layout="row" layout-align="center">
+            <div flex="25"><img src="./assets/logo.png " alt="Tesselar logo" style="width:100%;" /></div>
+        </section>
+        <div layout="row" layout-align="center">
+            <md-input-container flex>
+                <label for="user"> Usuario </label>
+                <input type="text" ng-model="vm.loginForm.user" name="user" required>
+                <div ng-messages="loginForm.user.$error">
+                    <div ng-message="required">*</div>
+                </div>
+            </md-input-container>
+        </div>
+
+        <div layout="row" layout-align="center">
+            <md-input-container flex>
+                <label for="password"> Password </label>
+                <input type="password" ng-model="vm.loginForm.password" name="password" required>
+            </md-input-container>
+        </div>
+
+        <div layout="row" layout-align="center">
+            <md-button flex id="button-login" type="submit" class="md-primary md-raised" ng-disabled="loginForm.$invalid" aria-label="button-login"
+                ng-click="vm.login(vm.loginForm)">
+                Iniciar sesión </md-button>
+        </div>
+    </form>
+</div>
